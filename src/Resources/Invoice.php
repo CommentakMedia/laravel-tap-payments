@@ -25,7 +25,7 @@ class Invoice
 	}
 
 
-	public function getPaymetUrl()
+	public function getPaymentUrl()
 	{
 		return $this->attributes['transaction']['url'] ?? null;
 	}
@@ -40,6 +40,16 @@ class Invoice
 	public function getMetaData()
 	{
 		return $this->attributes['metadata'] ?? null;
+	}
+
+	public function getAmount()
+	{
+		return $this->attributes['amount'] ?? null;
+	}
+
+	public function getCurrency()
+	{
+		return $this->attributes['currency'] ?? null;
 	}
 
 	public function checkHash( $hash )
